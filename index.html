@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Premium APK — Download</title>
+<style>
+  :root{
+    --bg1:#0f1020;
+    --bg2:#2b0f3a;
+    --card:#0f1724;
+    --accent1:#ff3b6b;
+    --accent2:#ff8a00;
+    --muted:#98a0b3;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;
+    background: radial-gradient(1000px 600px at 10% 10%, rgba(62,9,121,0.18), transparent 8%),
+                linear-gradient(180deg,var(--bg1),var(--bg2));
+    min-height:100vh;
+    color:#eef2ff;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:28px;
+  }
+
+  .wrap{
+    width:100%;
+    max-width:920px;
+  }
+
+  .hero{
+    display:grid;
+    grid-template-columns: 120px 1fr;
+    gap:18px;
+    align-items:center;
+    background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border-radius:18px;
+    padding:18px;
+    box-shadow: 0 10px 40px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.03);
+  }
+
+  .app-icon{
+    width:108px;
+    height:108px;
+    border-radius:18px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.08));
+    border:1px solid rgba(255,255,255,0.02);
+  }
+  .app-icon img{width:100%; height:100%; object-fit:cover; display:block}
+
+  .meta h1{
+    margin:0 0 6px 0;
+    font-size:20px;
+    letter-spacing:0.2px;
+  }
+  .meta p{margin:0;color:var(--muted);font-size:13px}
+
+  .actions{
+    margin-top:14px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:11px 16px;
+    border-radius:12px;
+    cursor:pointer;
+    border:0;
+    font-weight:700;
+    font-size:15px;
+    text-decoration:none;
+    color:#fff;
+    transition:transform .12s ease, box-shadow .12s ease;
+    box-shadow: 0 6px 20px rgba(8,6,20,0.5);
+  }
+  .btn:active{transform:translateY(1px)}
+
+  .btn-download{
+    background: linear-gradient(90deg,var(--accent1),var(--accent2));
+  }
+  .btn-telegram{
+    background: linear-gradient(90deg,#2a9df4,#0a7df0);
+  }
+  .btn-neutral{
+    background: rgba(255,255,255,0.03);
+    color: #e6eefc;
+    border: 1px solid rgba(255,255,255,0.03);
+    font-weight:600;
+  }
+
+  .btn img.icon{width:20px;height:20px;display:block}
+
+  .card-grid{
+    margin-top:18px;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:14px;
+  }
+
+  .feature{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding:12px;
+    border-radius:12px;
+    display:flex;
+    gap:12px;
+    align-items:center;
+    border:1px solid rgba(255,255,255,0.02);
+  }
+  .feature img{width:44px;height:44px;border-radius:8px;object-fit:cover}
+  .feature .fmeta{font-size:13px;color:var(--muted)}
+  .feature h4{margin:0;font-size:14px}
+
+  .footer{
+    margin-top:18px;
+    text-align:center;
+    color:var(--muted);
+    font-size:13px;
+  }
+
+  /* responsive */
+  @media (max-width:620px){
+    .hero{grid-template-columns:80px 1fr}
+    .card-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero" role="main">
+      <!-- Replace this image with your hack-image PNG: assets/icon-hack.png -->
+      <div class="app-icon">
+        <img src="assets/icon-hack.png" alt="App Icon">
+      </div>
+
+      <div class="meta">
+        <h1>Wingo Mod v4.9 <span style="color:var(--muted);font-weight:600;font-size:12px">• Premium APK</span></h1>
+        <p>One-click download. No Google Drive popup. Tested on Android mobile browsers.</p>
+
+        <div class="actions">
+          <!-- Replace telegram.png with your PNG (assets/telegram.png or full URL) -->
+          <a class="btn btn-telegram" id="joinBtn" href="https://t.me/yourchannel" target="_blank" rel="noopener">
+            <img class="icon" src="assets/telegram.png" alt="tg"> Join Telegram
+          </a>
+
+          <!-- Download button: direct GitHub release link already used -->
+          <a class="btn btn-download" id="downloadBtn" href="https://github.com/ankitgamer505050-ship-it/Heue/releases/download/v1.0/default.apk" >
+            <img class="icon" src="assets/download.png" alt="dl"> Download APK
+          </a>
+
+          <!-- Optional plain link for privacy info -->
+          <a class="btn btn-neutral" id="infoBtn" href="#info" onclick="alert('This APK is hosted on GitHub Releases. Tap Download to start.');return false;">
+            About
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature cards -->
+    <div class="card-grid">
+      <div class="feature">
+        <img src="assets/feature1.png" alt="">
+        <div>
+          <h4>One-click Install</h4>
+          <div class="fmeta">Direct link from GitHub Releases — no sign-in required.</div>
+        </div>
+      </div>
+
+      <div class="feature">
+        <img src="assets/feature2.png" alt="">
+        <div>
+          <h4>Small & Fast</h4>
+          <div class="fmeta">~11 MB only — optimized & compressed.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>Tap <strong>Download</strong> and allow install from unknown sources if required by your device.</div>
+      <div style="margin-top:8px">Made by <strong>ankitgamer</strong> • <span style="opacity:.8">Fun Education</span></div>
+    </div>
+  </div>
+
+<script>
+  // Hints for users, and small UX improvements
+  const dl = document.getElementById('downloadBtn');
+  dl.addEventListener('click', function(e){
+    // Use target blank on mobile if prefer: but we keep default so it's immediate
+    // show small ripple effect by scaling
+    dl.style.transform = 'scale(.995)';
+    setTimeout(()=>dl.style.transform='scale(1)',120);
+    // optionally record analytics here
+    console.log('Download clicked');
+    // no JS preventing default — link will navigate and download
+  });
+
+  // If you want automatic download without leaving page, you can enable fetch+blob approach.
+  // But since we are using GitHub Releases (direct asset), normal href navigation is fine.
+</script>
+</body>
+</html>
